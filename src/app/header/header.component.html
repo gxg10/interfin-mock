@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+      <div class="col-sm-3">
+          LOGO
+        </div>
+        <div class="col-sm-9">
+            <div class="justify-content-end navigation" >
+                <button mat-flat-button routerLink="home" routerLinkActive="active" color="primary">Home</button>
+                <button mat-button [matMenuTriggerFor]="despre"> Despre </button>
+                  <mat-menu #despre="matMenu" [overlapTrigger]="false">
+                    <button mat-menu-item>Istoric</button>
+                    <button mat-menu-item>Activitate</button>
+                  </mat-menu>
+                <button mat-button [matMenuTriggerFor]="servicii">Servicii</button>
+                  <mat-menu #servicii="matMenu" [overlapTrigger]="false">
+                    <button mat-menu-item>Tranzactionare Online</button>
+                    <button mat-menu-item>Rapoarte</button>
+                  </mat-menu>
+                  <button mat-button routerLink="stiri" routerLinkActive="active" 
+                  [matMenuTriggerFor]="stiri">stiri</button>
+    
+                  <button mat-button routerLink="contact" routerLinkActive="active"
+                  [matMenuTriggerFor]="contact">contact</button>
+            </div>
+        </div>
+        
+  </div>
+</div>
