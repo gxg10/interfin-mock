@@ -11,6 +11,8 @@ import { MatButtonModule, MatCheckboxModule, MatDatepickerModule, MatFormFieldMo
 
   import {FlexLayoutModule} from '@angular/flex-layout';
   import { NgxHmCarouselModule } from 'ngx-hm-carousel';
+  import { UICarouselModule } from "ui-carousel";
+
 
 
 import { AppComponent } from './app.component';
@@ -21,6 +23,10 @@ import { ServiciiComponent } from './servicii/servicii.component';
 import { StiriComponent } from './stiri/stiri.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+
+import { FormsModule } from '@angular/forms';
+import { baseUrl } from './baseurl';
+
 
 @NgModule({
   declarations: [
@@ -41,9 +47,9 @@ import { FooterComponent } from './footer/footer.component';
   MatInputModule, MatRadioModule, MatSelectModule, MatSliderModule,
   MatSlideToggleModule, MatToolbarModule, MatListModule, MatGridListModule,
   MatCardModule, MatIconModule, MatProgressSpinnerModule, MatDialogModule,MatMenuModule,
-  FlexLayoutModule, NgxHmCarouselModule
+  FlexLayoutModule, NgxHmCarouselModule, FormsModule,UICarouselModule
   ],
-  providers: [],
+  providers: [{ provide: 'baseUrl', useValue: baseUrl }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

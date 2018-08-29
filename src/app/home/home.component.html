@@ -1,39 +1,37 @@
-
-  <ngx-hm-carousel
-  [autoplay-speed]="5000"
-    
-    class="carousel c-accent">
+<div class="container">
+  <div class="row">
+      <ui-carousel #uiCarousel [infinite]="true" [fade]="true" [speed]="300"
+      [arrows]="true" height="500px" width="1200px">
+         <ui-carousel-item>
+             <img src="./assets/images/img1.png" alt="" draggable="false">
+         </ui-carousel-item>
+         <ui-carousel-item>
+             <img src="./assets/images/img2.png" alt="" draggable="false">
+         </ui-carousel-item>
+         <ui-carousel-item>
+             <img src="./assets/images/img3.png" alt="" draggable="false">
+         </ui-carousel-item>
+        </ui-carousel>
+  </div>
+  <div class="row mid">
+      <div class="col-sm-8 caseta">
+        prima coloana
+      </div>
+      <div class="col-sm-4 news">
+        a 2a coloana
+        </div>
   
-    <section ngx-hm-carousel-container class="content">
-        <article class="item cursor-pointer"
-          *ngFor="let avatar of avatars"
-          ngx-hm-carousel-item>
-          <div class="img"
-            [style.backgroundImage]="'url('+avatar.url+')'">
+    </div>
+    <div class="row">
+      <div class="col-sm despre">
+        prima coloana
+      </div>
+      <div class="col-sm tranzactii">
+        a 2la coloana
+        </div>
+        <div class="col-sm contact">
+          a 3a coloana
           </div>
-        </article>
-      </section>
-  
-    <ng-template #carouselPrev>
-      <div class="click-area">
-        <i class="material-icons">keyboard_arrow_left</i>
-      </div>
-    </ng-template>
-    <ng-template #carouselNext>
-      <div class="click-area">
-        <i class="material-icons">keyboard_arrow_right</i>
-      </div>
-    </ng-template>
-  
-    <ng-template #carouselDot let-model>
-      <div class="ball bg-accent"
-        [class.visible]="model.index === model.currentIndex"></div>
-    </ng-template>
-  
-    <ng-template #carouselProgress let-progress>
-      <div class="progress" *ngIf="progress > 0"
-      [style.width]="(direction==='right' ? progress : 100 - progress) + '%'"></div>
-    </ng-template>
-  
-  </ngx-hm-carousel>
-  
+    </div>
+    
+</div>
